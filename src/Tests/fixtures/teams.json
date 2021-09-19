@@ -1,0 +1,395 @@
+{
+  "get": "teams",
+  "parameters": {
+    "league": "135",
+    "season": "2021"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 487,
+        "name": "Lazio",
+        "country": "Italy",
+        "founded": 1900,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/487.png"
+      },
+      "venue": {
+        "id": 910,
+        "name": "Stadio Olimpico",
+        "address": "Viale dei Gladiatori, 2 \/ Via del Foro Italico",
+        "city": "Roma",
+        "capacity": 68530,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/910.png"
+      }
+    },
+    {
+      "team": {
+        "id": 488,
+        "name": "Sassuolo",
+        "country": "Italy",
+        "founded": 1922,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/488.png"
+      },
+      "venue": {
+        "id": 935,
+        "name": "MAPEI Stadium - Citt\u00e0 del Tricolore",
+        "address": "Piazza Azzuri d&apos;Italia, 1",
+        "city": "Reggio nell&apos;Emilia",
+        "capacity": 23717,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/935.png"
+      }
+    },
+    {
+      "team": {
+        "id": 489,
+        "name": "AC Milan",
+        "country": "Italy",
+        "founded": 1899,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/489.png"
+      },
+      "venue": {
+        "id": 907,
+        "name": "Stadio Giuseppe Meazza",
+        "address": "Via Piccolomini 5",
+        "city": "Milano",
+        "capacity": 80018,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/907.png"
+      }
+    },
+    {
+      "team": {
+        "id": 490,
+        "name": "Cagliari",
+        "country": "Italy",
+        "founded": 1920,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/490.png"
+      },
+      "venue": {
+        "id": 12275,
+        "name": "Unipol Domus",
+        "address": "Via Raimondo Carta Raspi",
+        "city": "Cagliari",
+        "capacity": 16416,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/12275.png"
+      }
+    },
+    {
+      "team": {
+        "id": 492,
+        "name": "Napoli",
+        "country": "Italy",
+        "founded": 1904,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/492.png"
+      },
+      "venue": {
+        "id": 11904,
+        "name": "Stadio Diego Armando Maradona",
+        "address": "Pizzale Vincenzo Tecchio",
+        "city": "Napoli",
+        "capacity": 60240,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/11904.png"
+      }
+    },
+    {
+      "team": {
+        "id": 494,
+        "name": "Udinese",
+        "country": "Italy",
+        "founded": 1896,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/494.png"
+      },
+      "venue": {
+        "id": 928,
+        "name": "Dacia Arena",
+        "address": "Piazza le Repubblica Argentina, 3",
+        "city": "Udine",
+        "capacity": 25952,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/928.png"
+      }
+    },
+    {
+      "team": {
+        "id": 495,
+        "name": "Genoa",
+        "country": "Italy",
+        "founded": 1893,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/495.png"
+      },
+      "venue": {
+        "id": 905,
+        "name": "Stadio Comunale Luigi Ferraris",
+        "address": "Via Giovanni De Pr\u00e0, 1",
+        "city": "Genova",
+        "capacity": 36703,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/905.png"
+      }
+    },
+    {
+      "team": {
+        "id": 496,
+        "name": "Juventus",
+        "country": "Italy",
+        "founded": 1897,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/496.png"
+      },
+      "venue": {
+        "id": 909,
+        "name": "Allianz Stadium",
+        "address": "Strada Comunale di Altessano 131",
+        "city": "Torino",
+        "capacity": 45666,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/909.png"
+      }
+    },
+    {
+      "team": {
+        "id": 497,
+        "name": "AS Roma",
+        "country": "Italy",
+        "founded": 1927,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/497.png"
+      },
+      "venue": {
+        "id": 910,
+        "name": "Stadio Olimpico",
+        "address": "Viale dei Gladiatori, 2 \/ Via del Foro Italico",
+        "city": "Roma",
+        "capacity": 68530,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/910.png"
+      }
+    },
+    {
+      "team": {
+        "id": 498,
+        "name": "Sampdoria",
+        "country": "Italy",
+        "founded": 1946,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/498.png"
+      },
+      "venue": {
+        "id": 905,
+        "name": "Stadio Comunale Luigi Ferraris",
+        "address": "Via Giovanni De Pr\u00e0, 1",
+        "city": "Genova",
+        "capacity": 36703,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/905.png"
+      }
+    },
+    {
+      "team": {
+        "id": 499,
+        "name": "Atalanta",
+        "country": "Italy",
+        "founded": 1907,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/499.png"
+      },
+      "venue": {
+        "id": 879,
+        "name": "Gewiss Stadium",
+        "address": "Viale Caio Giulio Cesare, 18",
+        "city": "Bergamo",
+        "capacity": 21300,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/879.png"
+      }
+    },
+    {
+      "team": {
+        "id": 500,
+        "name": "Bologna",
+        "country": "Italy",
+        "founded": 1909,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/500.png"
+      },
+      "venue": {
+        "id": 881,
+        "name": "Stadio Renato Dall'Ara",
+        "address": "Via Andrea Costa, 174",
+        "city": "Bologna",
+        "capacity": 39279,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/881.png"
+      }
+    },
+    {
+      "team": {
+        "id": 502,
+        "name": "Fiorentina",
+        "country": "Italy",
+        "founded": 1926,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/502.png"
+      },
+      "venue": {
+        "id": 902,
+        "name": "Stadio Artemio Franchi",
+        "address": "Viale Manfredo Fanti 14",
+        "city": "Firenze",
+        "capacity": 43147,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/902.png"
+      }
+    },
+    {
+      "team": {
+        "id": 503,
+        "name": "Torino",
+        "country": "Italy",
+        "founded": 1906,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/503.png"
+      },
+      "venue": {
+        "id": 943,
+        "name": "Stadio Olimpico Grande Torino",
+        "address": "Corso Sebastopoli 123, Santa Rita",
+        "city": "Torino",
+        "capacity": 27958,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/943.png"
+      }
+    },
+    {
+      "team": {
+        "id": 504,
+        "name": "Verona",
+        "country": "Italy",
+        "founded": 1903,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/504.png"
+      },
+      "venue": {
+        "id": 890,
+        "name": "Stadio Marc'Antonio Bentegodi",
+        "address": "Piazzale Olimpia",
+        "city": "Verona",
+        "capacity": 39211,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/890.png"
+      }
+    },
+    {
+      "team": {
+        "id": 505,
+        "name": "Inter",
+        "country": "Italy",
+        "founded": 1908,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/505.png"
+      },
+      "venue": {
+        "id": 907,
+        "name": "Stadio Giuseppe Meazza",
+        "address": "Via Piccolomini 5",
+        "city": "Milano",
+        "capacity": 80018,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/907.png"
+      }
+    },
+    {
+      "team": {
+        "id": 511,
+        "name": "Empoli",
+        "country": "Italy",
+        "founded": 1920,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/511.png"
+      },
+      "venue": {
+        "id": 896,
+        "name": "Stadio Carlo Castellani",
+        "address": "Viale delle Olimpiadi",
+        "city": "Empoli",
+        "capacity": 16284,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/896.png"
+      }
+    },
+    {
+      "team": {
+        "id": 514,
+        "name": "Salernitana",
+        "country": "Italy",
+        "founded": 2011,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/514.png"
+      },
+      "venue": {
+        "id": 933,
+        "name": "Stadio Arechi",
+        "address": "Via Salvador Allende",
+        "city": "Salerno",
+        "capacity": 37245,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/933.png"
+      }
+    },
+    {
+      "team": {
+        "id": 515,
+        "name": "Spezia",
+        "country": "Italy",
+        "founded": 1906,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/515.png"
+      },
+      "venue": {
+        "id": 939,
+        "name": "Stadio Alberto Picco",
+        "address": "Via Nicol\u00f2 Fieschi, 18",
+        "city": "La Spezia",
+        "capacity": 10336,
+        "surface": "artificial turf",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/939.png"
+      }
+    },
+    {
+      "team": {
+        "id": 517,
+        "name": "Venezia",
+        "country": "Italy",
+        "founded": 1907,
+        "national": false,
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/517.png"
+      },
+      "venue": {
+        "id": 948,
+        "name": "Stadio Pierluigi Penzo",
+        "address": "Isola di Sant&apos;Elena",
+        "city": "Venezia",
+        "capacity": 7426,
+        "surface": "grass",
+        "image": "https:\/\/media.api-sports.io\/football\/venues\/948.png"
+      }
+    }
+  ]
+}

@@ -6,17 +6,17 @@ namespace lucasaba\RapidAPI\Entity;
 
 class Team
 {
-    private int $id;
+    private ?int $id;
     private string $name;
     private string $country;
-    private int $founded;
+    private ?int $founded;
     private bool $national;
     private string $logo;
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -38,9 +38,9 @@ class Team
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getFounded(): int
+    public function getFounded(): ?int
     {
         return $this->founded;
     }

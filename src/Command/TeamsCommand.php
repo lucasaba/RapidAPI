@@ -4,43 +4,43 @@
 namespace lucasaba\RapidAPI\Command;
 
 
-use lucasaba\RapidAPI\Request\LeaguesRequest;
-use lucasaba\RapidAPI\Response\LeaguesResponse;
+use lucasaba\RapidAPI\Request\TeamsRequest;
+use lucasaba\RapidAPI\Response\TeamsResponse;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class LeaguesCommand extends AbstractApiCommand
+class TeamsCommand extends AbstractApiCommand
 {
-    protected static $defaultName = 'app:get-leagues';
+    protected static $defaultName = 'app:get-teams';
 
     protected function configure(): void
     {
-        $this->setDescription('Gets leagues information')
+        $this->setDescription('Gets teams information')
             ->addArgument('token', InputArgument::REQUIRED, 'RapidAPI token')
-            ->addOption('countryName', null, InputOption::VALUE_OPTIONAL, 'The country name to search')
-            ->addOption('season', null, InputOption::VALUE_OPTIONAL, 'The season of the league')
-            ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'The type of the league (cup or league)');
+            ->addOption('league', null, InputOption::VALUE_OPTIONAL, 'The league id of the teams')
+            ->addOption('season', null, InputOption::VALUE_OPTIONAL, 'The season of the teams')
+            ->addOption('country', null, InputOption::VALUE_OPTIONAL, 'The country of the teams');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $client = $this->getClient($input->getArgument('token'));
 
-        $request = new LeaguesRequest();
-        if ($input->getOption('countryName')) {
-            $request->withCountry($input->getOption('countryName'));
+        $request = new TeamsRequest();
+        if ($input->getOption('league')) {
+            $request->withLeague($input->getOption('league'));
         }
         if ($input->getOption('season')) {
             $request->withSeason($input->getOption('season'));
         }
-        if ($input->getOption('type')) {
-            $request->withType($input->getOption('type'));
+        if ($input->getOption('country')) {
+            $request->withCountry($input->getOption('country'));
         }
 
-        $response = $client->get($request, LeaguesResponse::class, true);
+        $response = $client->get($request, TeamsResponse::class, true);
         var_dump($response);
         /*$content = file_get_contents(__DIR__ . '/../../risultati.json');
         $result = $serializer->deserialize($content, 'lucasaba\RapidAPI\Response\CountriesResponse', 'json');
