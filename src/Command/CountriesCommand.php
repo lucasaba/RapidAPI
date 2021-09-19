@@ -4,8 +4,6 @@
 namespace lucasaba\RapidAPI\Command;
 
 
-use JMS\Serializer\SerializerBuilder;
-use lucasaba\RapidAPI\Infra\Client;
 use lucasaba\RapidAPI\Request\CountriesRequest;
 use lucasaba\RapidAPI\Response\CountriesResponse;
 use Symfony\Component\Console\Command\Command;
@@ -13,15 +11,14 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\HttpClient\HttpClient;
 
-class CountriesCommand extends Command
+class CountriesCommand extends AbstractApiCommand
 {
     protected static $defaultName = 'app:get-countries';
 
     protected function configure(): void
     {
-        $this->setDescription('Gets countries informations')
+        $this->setDescription('Gets countries information')
             ->addArgument('token', InputArgument::REQUIRED, 'RapidAPI token')
             ->addOption('countryName', null, InputOption::VALUE_OPTIONAL, 'The country name to search')
             ->addOption('countryCode', null, InputOption::VALUE_OPTIONAL, 'The country code to search');
@@ -29,8 +26,7 @@ class CountriesCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $serializer = SerializerBuilder::create()->build();
-        $client = new Client(HttpClient::create(), $serializer, $input->getArgument('token'));
+        $client = $this->getClient($input->getArgument('token'));
 
         $request = new CountriesRequest();
         if ($input->getOption('countryName')) {
