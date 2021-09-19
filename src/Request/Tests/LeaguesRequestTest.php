@@ -2,6 +2,7 @@
 
 namespace lucasaba\RapidAPI\Request\Tests;
 
+use Exception;
 use lucasaba\RapidAPI\Entity\League;
 use lucasaba\RapidAPI\Request\LeaguesRequest;
 use PHPUnit\Framework\TestCase;
@@ -63,7 +64,7 @@ class LeaguesRequestTest extends TestCase
         $request->withType(League::LEAGUE_TYPE_LEAGUE);
         $this->assertEquals(['type' => League::LEAGUE_TYPE_LEAGUE], $request->getQuery());
 
-        $this->expectException(\Exception::class);
+        $this->expectException(Exception::class);
         $request->withType('invalid');
     }
 
@@ -102,7 +103,7 @@ class LeaguesRequestTest extends TestCase
         );
     }
 
-    public function testEndpointIsReturnd()
+    public function testEndpointIsReturned()
     {
         $request = new LeaguesRequest();
         $this->assertEquals('/leagues', $request->getEndpoint());

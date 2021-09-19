@@ -1,4 +1,5 @@
 ![UnitTests](https://github.com/lucasaba/RapidAPI/actions/workflows/unit-tests.yml/badge.svg)
+![Psalm](https://github.com/lucasaba/RapidAPI/actions/workflows/psalm.yml/badge.svg)
 
 # RapidAPI - PHP Soccer client
 

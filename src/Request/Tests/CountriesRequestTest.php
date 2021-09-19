@@ -31,7 +31,7 @@ class CountriesRequestTest extends TestCase
         $this->assertEquals(['code' => 'TT', 'name' => 'TestName'], $request->getQuery());
     }
 
-    public function testEndpointIsReturnd()
+    public function testEndpointIsReturned()
     {
         $request = new CountriesRequest();
         $this->assertEquals('/countries', $request->getEndpoint());
