@@ -67,7 +67,7 @@ class TeamsRequestTest extends TestCase
         );
     }
 
-    public function testEndpointIsReturnd()
+    public function testEndpointIsReturned()
     {
         $request = new TeamsRequest();
         $this->assertEquals('/teams', $request->getEndpoint());
