@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class CountriesResponseTest extends TestCase
 {
-    public function testCorrectlySerializeResponse()
+    public function testCorrectlySerializeResponse(): void
     {
         $content = file_get_contents(__DIR__ . '/../../Tests/fixtures/countries.json');
         $serializer = SerializerBuilder::create()->build();

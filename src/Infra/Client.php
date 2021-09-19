@@ -30,10 +30,15 @@ class Client implements IClient
         $this->serializer = $serializer;
     }
 
-    public function get(IRequest $request, string $serializerClass): Response
+    public function get(IRequest $request, string $serializerClass, bool $saveToFile = false): Response
     {
         $response = $this->httpClient->request('GET', $request->getEndpoint(), ['query' => $request->getQuery()]);
+        /** @var Response $deserialized */
+        $deserialized = $this->serializer->deserialize($response->getContent(), $serializerClass, 'json');
+        if($saveToFile) {
+            file_put_contents($deserialized->getGet().'.json', $response->getContent());
+        }
 
-        return $this->serializer->deserialize($response->getContent(), $serializerClass, 'json');
+        return $deserialized;
     }
 }

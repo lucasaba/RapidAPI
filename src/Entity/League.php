@@ -6,7 +6,9 @@ namespace lucasaba\RapidAPI\Entity;
 
 class League
 {
-    const TYPE_LEAGUE = 'League';
+    public const LEAGUE_TYPE_LEAGUE = 'league';
+    public const LEAGUE_TYPE_CUP = 'cup';
+    public const LEAGUE_TYPES = [self::LEAGUE_TYPE_LEAGUE, self::LEAGUE_TYPE_CUP];
 
     private int $id;
     private string $name;

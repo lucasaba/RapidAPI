@@ -4,6 +4,7 @@
 namespace lucasaba\RapidAPI\Response;
 
 
+use JMS\Serializer\Annotation as Serializer;
 use lucasaba\RapidAPI\Entity\Country;
 use lucasaba\RapidAPI\Entity\League;
 
@@ -13,6 +14,7 @@ class LeagueResponseElement
     private Country $country;
     /**
      * @var \lucasaba\RapidAPI\Entity\Season[]
+     * @Serializer\Type("array<lucasaba\RapidAPI\Entity\Season>")
      */
     private array $seasons;
 

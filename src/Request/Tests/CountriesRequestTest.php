@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class CountriesRequestTest extends TestCase
 {
-    public function testAddsCountryName()
+    public function testAddsCountryName(): void
     {
         $request = new CountriesRequest();
         $request->withCountryName('Test name');
@@ -15,7 +15,7 @@ class CountriesRequestTest extends TestCase
         $this->assertEquals(['name' => 'Test name'], $request->getQuery());
     }
 
-    public function testAddsCountryCode()
+    public function testAddsCountryCode(): void
     {
         $request = new CountriesRequest();
         $request->withCountryCode('TT');
@@ -23,11 +23,17 @@ class CountriesRequestTest extends TestCase
         $this->assertEquals(['code' => 'TT'], $request->getQuery());
     }
 
-    public function testAddsBothCountryCOdeAndName()
+    public function testAddsBothCountryCodeAndName(): void
     {
         $request = new CountriesRequest();
         $request->withCountryCode('TT')->withCountryName('TestName');
 
         $this->assertEquals(['code' => 'TT', 'name' => 'TestName'], $request->getQuery());
+    }
+
+    public function testEndpointIsReturnd()
+    {
+        $request = new CountriesRequest();
+        $this->assertEquals('/countries', $request->getEndpoint());
     }
 }

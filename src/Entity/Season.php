@@ -4,10 +4,20 @@
 namespace lucasaba\RapidAPI\Entity;
 
 
+use JMS\Serializer\Annotation as Serializer;
+
 class Season
 {
     private int $year;
+    /**
+     * @var \DateTimeImmutable
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d'>")
+     */
     private \DateTimeImmutable $start;
+    /**
+     * @var \DateTimeImmutable
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d'>")
+     */
     private \DateTimeImmutable $end;
     private bool $current;
 
