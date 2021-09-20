@@ -4,43 +4,46 @@
 namespace lucasaba\RapidAPI\Command;
 
 
-use lucasaba\RapidAPI\Request\TeamsRequest;
-use lucasaba\RapidAPI\Response\TeamsResponse;
+use lucasaba\RapidAPI\Request\FixturesRequest;
+use lucasaba\RapidAPI\Response\FixturesResponse;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class TeamsCommand extends AbstractApiCommand
+class FixturesCommand extends AbstractApiCommand
 {
-    protected static $defaultName = 'app:get-teams';
+    protected static $defaultName = 'app:get-fixtures';
 
     protected function configure(): void
     {
         $this->setDescription('Gets teams information')
             ->addArgument('token', InputArgument::REQUIRED, 'RapidAPI token')
-            ->addOption('league', null, InputOption::VALUE_OPTIONAL, 'The league id of the teams')
-            ->addOption('season', null, InputOption::VALUE_OPTIONAL, 'The season of the teams')
-            ->addOption('country', null, InputOption::VALUE_OPTIONAL, 'The country of the teams');
+            ->addOption('league', null, InputOption::VALUE_OPTIONAL, 'The league id of the league')
+            ->addOption('season', null, InputOption::VALUE_REQUIRED, 'The season of the fixtures')
+            ->addOption('from', null, InputOption::VALUE_OPTIONAL, 'Date from')
+            ->addOption('to', null, InputOption::VALUE_OPTIONAL, 'Date to');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $client = $this->getClient($input->getArgument('token'));
 
-        $request = new TeamsRequest();
+        $request = new FixturesRequest($input->getOption('season'));
         if ($input->getOption('league')) {
             $request->withLeague($input->getOption('league'));
         }
-        if ($input->getOption('season')) {
-            $request->withSeason($input->getOption('season'));
-        }
-        if ($input->getOption('country')) {
-            $request->withCountry($input->getOption('country'));
+        if ($input->getOption('from')) {
+            $request->withDateFrom($input->getOption('from'));
         }
 
-        $response = $client->get($request, TeamsResponse::class, true);
+        if ($input->getOption('to')) {
+            $request->withDateTo($input->getOption('to'));
+        }
+
+        $response = $client->get($request, FixturesResponse::class, true);
+
         $output->write(sprintf('There are %s results', $response->getResults()));
 
         return Command::SUCCESS;

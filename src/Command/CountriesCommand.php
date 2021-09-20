@@ -37,10 +37,7 @@ class CountriesCommand extends AbstractApiCommand
         }
 
         $response = $client->get($request, CountriesResponse::class);
-        var_dump($response);
-        /*$content = file_get_contents(__DIR__ . '/../../risultati.json');
-        $result = $serializer->deserialize($content, 'lucasaba\RapidAPI\Response\CountriesResponse', 'json');
-        var_dump($result);*/
+        $output->write(sprintf('There are %s results', $response->getResults()));
 
         return Command::SUCCESS;
     }

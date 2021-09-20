@@ -9,7 +9,7 @@ class MatchTeam
     private int $id;
     private string $name;
     private string $logo;
-    private bool $winner;
+    private ?bool $winner;
 
     /**
      * @return int
@@ -36,9 +36,9 @@ class MatchTeam
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function isWinner(): bool
+    public function isWinner(): ?bool
     {
         return $this->winner;
     }

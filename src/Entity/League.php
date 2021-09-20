@@ -12,8 +12,10 @@ class League
 
     private int $id;
     private string $name;
-    private string $type;
+    private ?string $type;
     private string $logo;
+    private ?int $season;
+    private ?string $round;
 
     /**
      * @return int
@@ -32,9 +34,9 @@ class League
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -45,5 +47,21 @@ class League
     public function getLogo(): string
     {
         return $this->logo;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getSeason(): ?int
+    {
+        return $this->season;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getRound(): ?string
+    {
+        return $this->round;
     }
 }

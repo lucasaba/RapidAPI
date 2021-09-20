@@ -6,13 +6,13 @@ namespace lucasaba\RapidAPI\Entity;
 
 class MatchGoals
 {
-    private int $home;
-    private int $away;
+    private ?int $home;
+    private ?int $away;
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getHome(): int
+    public function getHome(): ?int
     {
         return $this->home;
     }
@@ -20,7 +20,7 @@ class MatchGoals
     /**
      * @return int
      */
-    public function getAway(): int
+    public function getAway(): ?int
     {
         return $this->away;
     }
