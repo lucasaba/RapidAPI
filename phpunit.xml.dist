@@ -30,6 +30,7 @@
         </include>
         <exclude>
             <directory suffix=".php">src/*/Tests</directory>
+            <directory suffix=".php">src/Command</directory>
             <file>src/autoload.php</file>
         </exclude>
     </coverage>
