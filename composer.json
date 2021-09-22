@@ -1,6 +1,7 @@
 {
     "name": "lucasaba/soccersapi",
     "description": "PHP Client for rapidapi.com",
+    "keywords": ["soccer", "api", "rapidapi", "soccer-api"],
     "type": "library",
     "license": "MIT",
     "autoload": {
