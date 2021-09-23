@@ -11,6 +11,7 @@ class FixturesRequestTest extends TestCase
     {
         $request = new FixturesRequest(2021);
         $request->withId(1)
+            ->withSeason(2019)
             ->withLeague(2)
             ->withTeam(3)
             ->withDate('2021-01-01')
@@ -21,7 +22,7 @@ class FixturesRequestTest extends TestCase
         $this->assertEquals(
             [
                 'id' => 1,
-                'season' => 2021,
+                'season' => 2019,
                 'league' => 2,
                 'team' => 3,
                 'date' => '2021-01-01',

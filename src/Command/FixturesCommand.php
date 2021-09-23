@@ -31,6 +31,9 @@ class FixturesCommand extends AbstractApiCommand
         $client = $this->getClient($input->getArgument('token'));
 
         $request = new FixturesRequest($input->getOption('season'));
+        if ($input->getOption('season')) {
+            $request->withSeason($input->getOption('season'));
+        }
         if ($input->getOption('league')) {
             $request->withLeague($input->getOption('league'));
         }
