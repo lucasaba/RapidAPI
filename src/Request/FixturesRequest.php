@@ -34,6 +34,12 @@ class FixturesRequest implements IRequest
         return $this;
     }
 
+    public function withSeason(int $season): FixturesRequest
+    {
+        $this->season = $season;
+        return $this;
+    }
+
     public function withLeague(int $leagueId): FixturesRequest
     {
         $this->league = $leagueId;
